@@ -11,7 +11,34 @@
 		A42E96AA1E469CBB00900E51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42E96A91E469CBB00900E51 /* ViewController.swift */; };
 		A42E96AC1E469CBB00900E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A42E96AB1E469CBB00900E51 /* Assets.xcassets */; };
 		A42E96AF1E469CBB00900E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42E96AD1E469CBB00900E51 /* Main.storyboard */; };
+		A42E96B71E469E9200900E51 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */; };
+		A42E96B81E469E9200900E51 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A42E96BD1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A42E96BC1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A42E96B91E469E9200900E51 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A42E96B81E469E9200900E51 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A42E96BB1E469ED400900E51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				A42E96BD1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A42E96A41E469CBB00900E51 /* Echo Server Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Echo Server Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +47,8 @@
 		A42E96AB1E469CBB00900E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A42E96AE1E469CBB00900E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A42E96B01E469CBB00900E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		A42E96BC1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaAsyncSocket.framework.dSYM; path = Carthage/Build/Mac/CocoaAsyncSocket.framework.dSYM; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A42E96B71E469E9200900E51 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				A42E96A61E469CBB00900E51 /* Echo Server Swift */,
+				A42E96BA1E469E9A00900E51 /* Frameworks */,
 				A42E96A51E469CBB00900E51 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +92,15 @@
 			path = "Echo Server Swift";
 			sourceTree = "<group>";
 		};
+		A42E96BA1E469E9A00900E51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A42E96BC1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM */,
+				A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +111,8 @@
 				A42E96A01E469CBB00900E51 /* Sources */,
 				A42E96A11E469CBB00900E51 /* Frameworks */,
 				A42E96A21E469CBB00900E51 /* Resources */,
+				A42E96B91E469E9200900E51 /* Embed Frameworks */,
+				A42E96BB1E469ED400900E51 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -246,6 +288,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Echo Server Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamesonricks.Echo-Server-Swift";
@@ -259,6 +305,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = "Echo Server Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jamesonricks.Echo-Server-Swift";
