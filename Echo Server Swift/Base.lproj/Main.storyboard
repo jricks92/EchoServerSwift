@@ -664,8 +664,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="EchoServerSwift" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="407"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -678,10 +678,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="318.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Echo Server View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Echo_Server_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="EchoServerViewController" customModule="Echo_Server_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="417"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -720,6 +720,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="startStop:" target="XfG-lQ-9wD" id="gMr-hZ-QyC"/>
+                                </connections>
                             </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbw-3o-nWT">
                                 <rect key="frame" x="20" y="20" width="440" height="341"/>
@@ -761,6 +764,11 @@
                             <constraint firstItem="qbw-3o-nWT" firstAttribute="top" secondItem="0ky-c3-0M7" secondAttribute="bottom" constant="15" id="jRl-O1-HGd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logView" destination="cho-QR-L3y" id="GgV-Pk-HgQ"/>
+                        <outlet property="portField" destination="aoi-gR-tr2" id="AA5-H2-U3g"/>
+                        <outlet property="startStopButton" destination="0ky-c3-0M7" id="4Lc-bU-4XF"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
