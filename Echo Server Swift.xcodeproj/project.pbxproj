@@ -14,6 +14,7 @@
 		A42E96B71E469E9200900E51 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */; };
 		A42E96B81E469E9200900E51 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A42E96BD1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM in CopyFiles */ = {isa = PBXBuildFile; fileRef = A42E96BC1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM */; };
+		A42E96C31E46B8C500900E51 /* Readme.md in Sources */ = {isa = PBXBuildFile; fileRef = A42E96C21E46B8C500900E51 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		A42E96B01E469CBB00900E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A42E96B61E469E9200900E51 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		A42E96BC1E469EDD00900E51 /* CocoaAsyncSocket.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = CocoaAsyncSocket.framework.dSYM; path = Carthage/Build/Mac/CocoaAsyncSocket.framework.dSYM; sourceTree = "<group>"; };
+		A42E96C21E46B8C500900E51 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		A42E969B1E469CBB00900E51 = {
 			isa = PBXGroup;
 			children = (
+				A42E96C21E46B8C500900E51 /* Readme.md */,
 				A42E96A61E469CBB00900E51 /* Echo Server Swift */,
 				A42E96BA1E469E9A00900E51 /* Frameworks */,
 				A42E96A51E469CBB00900E51 /* Products */,
@@ -176,6 +179,7 @@
 			files = (
 				A42E96AA1E469CBB00900E51 /* EchoServerViewController.swift in Sources */,
 				A42E96A81E469CBB00900E51 /* EchoServerAppDelegate.swift in Sources */,
+				A42E96C31E46B8C500900E51 /* Readme.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +340,7 @@
 				A42E96B51E469CBB00900E51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
