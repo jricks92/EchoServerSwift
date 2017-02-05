@@ -9,20 +9,13 @@
 import Cocoa
 import CocoaAsyncSocket
 
-struct Constants {
-    static let WELCOME_MSG = 0
-    static let ECHO_MSG = 1
-    static let WARNING_MSG = 2
-    
-    static let READ_TIMEOUT = 15.0
-    static let READ_TIMEOUT_EXTENSION = 10.0
-}
-
 class EchoServerViewController: NSViewController {
     
     // MARK: Class Variables
     
     var isRunning = false
+    
+    let appDelegate = NSApplication.shared().delegate as! AppDelegate
     
     // MARK: Outlets
     
@@ -36,6 +29,9 @@ class EchoServerViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Set appDelegate view controller to our current view controller
+        appDelegate.viewController = self
     }
 
     override var representedObject: Any? {
@@ -47,8 +43,6 @@ class EchoServerViewController: NSViewController {
     // MARK: Actions
 
     @IBAction func startStop(_ sender: Any) {
-        
-        let appDelegate = NSApplication.shared().delegate as! AppDelegate
         
         if (!isRunning) {
             var port = 0
